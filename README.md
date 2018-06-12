@@ -1,8 +1,9 @@
 # EthereumDB (Python and SQL)
 
-Code to write ethereum blockchain data to an SQLite database.
+Create the EthereumDB containing data residing on the Ethereum blockchain. 
+Database management system: SQLite.
 
-## Writing a database
+## Create a database
 1. Connect to [Infura](https://www.infura.io) (or run a local node).
 2. Uncomment and specify the path in ```database.py```:
 
@@ -18,6 +19,8 @@ Code to write ethereum blockchain data to an SQLite database.
 ```python database.py```
 
 
+## More on database design
+
 Database consists of 3 tables:
 - **Quick**: most relevant transaction info for quick access & analysis
 - **TX**: all remainder transaction info
@@ -27,7 +30,7 @@ Quick | TX | Block
 ------|----|------
 'from'/'sender', 'to'/'recipient', 'value', 'nonce', 'blockNumber', 'txHash', 'balanceTo', 'balanceFrom' | 'blockNumber', 'gas', 'gasPrice', 'input', 'transactionIndex', 'v', 'r', 's', 'contractAddress', 'cumulativeGasUsed', 'gasUsed', 'logs', 'logsBloom', 'status', 'transactionHash' | 'difficulty', 'extraData', 'gasLimit', 'blockGasUsed', 'blockHash', 'blockLogsBloom', 'miner', 'mixHash', 'blockNonce', 'blockNumber', 'parentHash', 'receiptsRoot', 'sha3Uncles', 'size', 'stateRoot', 'timestamp', 'totalDifficulty', 'transactions', 'transactionsRoot', 'uncles'
 
-## Structure of blocks, transactions and receipts
+### Meaning of the variables in the EthereumDB
 
 #### Quick
 Variable | Meaning
@@ -90,7 +93,7 @@ Variable | Meaning
 [source 4](https://web3js.readthedocs.io/en/1.0/web3-eth.html#gettransaction)
 [source5](https://web3js.readthedocs.io/en/1.0/web3-eth.html#gettransactionreceipt)
 
-## Using the database
+## How to use the database
 
 ```python
 import sqlite3 as sq3
