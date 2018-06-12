@@ -3,8 +3,17 @@
 Code to write ethereum blockchain data to an SQLite database.
 
 ## Writing a database
-1. Connect to Infura (or run a local node).
-2. Uncomment and specify the right path to the connection method in ```database.py```.
+1. Connect to [Infura](www.infura.io) (or run a local node).
+2. Uncomment and specify the path in ```database.py```:
+
+```python
+#uncomment one of the options below
+# 1. connection via Infura
+#web3 = Web3(Web3.HTTPProvider("https://mainnet.infura.io/your-personal-number"))
+
+# 2. or connection via local node 
+#web3 = Web3(Web3.IPCProvider('/your-path-to/geth.ipc'))
+```
 3. execute:
 ```python database.py```
 
