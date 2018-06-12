@@ -1,13 +1,13 @@
-# blockchainDB
+# EthereumDB (Python and SQL)
 
 Code to write ethereum blockchain data to an SQLite database.
 
 execute:
 ```python database.py```
 
-Database consists of 3 tables (soon 4):
+Database consists of 3 tables:
 - **Quick**: most relevant transaction info for quick access & analysis
-- **TX**: all remiander transaction info
+- **TX**: all remainder transaction info
 - **Block**: block-specific info
 
 Quick | TX | Block
